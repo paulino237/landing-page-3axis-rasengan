@@ -1,7 +1,10 @@
-import '@rasenganjs/image/css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import './styles/index.css';
-import { type AppProps } from 'rasengan';
+import Page from '@/app/_routes/index.page';
 
-export default function App({ Component, children }: AppProps) {
-  return <Component>{children}</Component>;
-}
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <Page />
+  </React.StrictMode>
+);

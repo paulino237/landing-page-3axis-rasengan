@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'rasengan';
 import { HiMenu, HiX } from 'react-icons/hi';
 
 const Navbar = () => {
@@ -18,16 +17,16 @@ const Navbar = () => {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
-                <Link to="/" className="navbar-logo">
+                <a href="/" className="navbar-logo">
                     <span>NexusFlow</span>
-                </Link>
+                </a>
 
                 <ul className="navbar-nav">
-                    <li><Link to="#features">Features</Link></li>
-                    <li><Link to="#solutions">Solutions</Link></li>
-                    <li><Link to="#pricing">Pricing</Link></li>
-                    <li><Link to="#contact">Contact</Link></li>
-                    <li><Link to="#demo" className="navbar-cta">Start Free Trial</Link></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#demo" className="navbar-cta">Start Free Trial</a></li>
                 </ul>
 
                 <button
@@ -40,13 +39,13 @@ const Navbar = () => {
 
             {mobileMenuOpen && (
                 <div className="navbar-mobile-menu">
-                    <Link to="#features" onClick={() => setMobileMenuOpen(false)}>Features</Link>
-                    <Link to="#solutions" onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
-                    <Link to="#pricing" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-                    <Link to="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-                    <Link to="#demo" className="navbar-cta" onClick={() => setMobileMenuOpen(false)}>
+                    <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
+                    <a href="#solutions" onClick={() => setMobileMenuOpen(false)}>Solutions</a>
+                    <a href="#pricing" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
+                    <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+                    <a href="#demo" className="navbar-cta" onClick={() => setMobileMenuOpen(false)}>
                         Start Free Trial
-                    </Link>
+                    </a>
                 </div>
             )}
         </nav>

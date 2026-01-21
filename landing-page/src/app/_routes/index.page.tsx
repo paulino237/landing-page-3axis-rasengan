@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { PageComponent } from 'rasengan';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import HeroSection2 from '@/components/HeroSection2';
 
-const Page: PageComponent = () => {
+const Page = () => {
   const [showSecondHero, setShowSecondHero] = useState(false);
 
   return (
@@ -19,10 +18,6 @@ const Page: PageComponent = () => {
   );
 };
 
-Page.metadata = {
-  title: 'TriAxis - Create Stunning 3D Experiences',
-  description:
-    'TriAxis simplifie la création d\'animations et visualisations 3D pour le web. Une surcouche légère de Three.js qui rend le 3D accessible à tous.',
-};
+// Page metadata removed as it is Rasengan specific. Title is set in index.html.
 
 export default Page;
